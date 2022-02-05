@@ -39,7 +39,7 @@ engine.addEntity(entity3)
 entity3.setParent(_scene)
 entity3.addComponentOrReplace(gltfShape)
 const transform4 = new Transform({
-  position: new Vector3(40, 0, 8),
+  position: new Vector3(8, 0, 24),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -50,7 +50,7 @@ engine.addEntity(entity4)
 entity4.setParent(_scene)
 entity4.addComponentOrReplace(gltfShape)
 const transform5 = new Transform({
-  position: new Vector3(56, 0, 8),
+  position: new Vector3(24, 0, 24),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -61,7 +61,7 @@ engine.addEntity(entity5)
 entity5.setParent(_scene)
 entity5.addComponentOrReplace(gltfShape)
 const transform6 = new Transform({
-  position: new Vector3(72, 0, 8),
+  position: new Vector3(8, 0, 40),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -72,7 +72,7 @@ engine.addEntity(entity6)
 entity6.setParent(_scene)
 entity6.addComponentOrReplace(gltfShape)
 const transform7 = new Transform({
-  position: new Vector3(88, 0, 8),
+  position: new Vector3(24, 0, 40),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -83,7 +83,7 @@ engine.addEntity(entity7)
 entity7.setParent(_scene)
 entity7.addComponentOrReplace(gltfShape)
 const transform8 = new Transform({
-  position: new Vector3(104, 0, 8),
+  position: new Vector3(8, 0, 56),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -94,7 +94,7 @@ engine.addEntity(entity8)
 entity8.setParent(_scene)
 entity8.addComponentOrReplace(gltfShape)
 const transform9 = new Transform({
-  position: new Vector3(120, 0, 8),
+  position: new Vector3(24, 0, 56),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -105,7 +105,7 @@ engine.addEntity(entity9)
 entity9.setParent(_scene)
 entity9.addComponentOrReplace(gltfShape)
 const transform10 = new Transform({
-  position: new Vector3(136, 0, 8),
+  position: new Vector3(8, 0, 72),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -116,7 +116,7 @@ engine.addEntity(entity10)
 entity10.setParent(_scene)
 entity10.addComponentOrReplace(gltfShape)
 const transform11 = new Transform({
-  position: new Vector3(152, 0, 8),
+  position: new Vector3(24, 0, 72),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -127,7 +127,7 @@ engine.addEntity(entity11)
 entity11.setParent(_scene)
 entity11.addComponentOrReplace(gltfShape)
 const transform12 = new Transform({
-  position: new Vector3(8, 0, 24),
+  position: new Vector3(8, 0, 88),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -138,7 +138,7 @@ engine.addEntity(entity12)
 entity12.setParent(_scene)
 entity12.addComponentOrReplace(gltfShape)
 const transform13 = new Transform({
-  position: new Vector3(24, 0, 24),
+  position: new Vector3(24, 0, 88),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -149,7 +149,7 @@ engine.addEntity(entity13)
 entity13.setParent(_scene)
 entity13.addComponentOrReplace(gltfShape)
 const transform14 = new Transform({
-  position: new Vector3(40, 0, 24),
+  position: new Vector3(8, 0, 104),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -160,7 +160,7 @@ engine.addEntity(entity14)
 entity14.setParent(_scene)
 entity14.addComponentOrReplace(gltfShape)
 const transform15 = new Transform({
-  position: new Vector3(56, 0, 24),
+  position: new Vector3(24, 0, 104),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -171,7 +171,7 @@ engine.addEntity(entity15)
 entity15.setParent(_scene)
 entity15.addComponentOrReplace(gltfShape)
 const transform16 = new Transform({
-  position: new Vector3(72, 0, 24),
+  position: new Vector3(8, 0, 120),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -182,7 +182,7 @@ engine.addEntity(entity16)
 entity16.setParent(_scene)
 entity16.addComponentOrReplace(gltfShape)
 const transform17 = new Transform({
-  position: new Vector3(88, 0, 24),
+  position: new Vector3(24, 0, 120),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -193,7 +193,7 @@ engine.addEntity(entity17)
 entity17.setParent(_scene)
 entity17.addComponentOrReplace(gltfShape)
 const transform18 = new Transform({
-  position: new Vector3(104, 0, 24),
+  position: new Vector3(8, 0, 136),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
@@ -204,153 +204,21 @@ engine.addEntity(entity18)
 entity18.setParent(_scene)
 entity18.addComponentOrReplace(gltfShape)
 const transform19 = new Transform({
-  position: new Vector3(120, 0, 24),
+  position: new Vector3(24, 0, 136),
   rotation: new Quaternion(0, 0, 0, 1),
   scale: new Vector3(1, 1, 1)
 })
 entity18.addComponentOrReplace(transform19)
 
-const entity19 = new Entity('entity19')
-engine.addEntity(entity19)
-entity19.setParent(_scene)
-entity19.addComponentOrReplace(gltfShape)
-const transform20 = new Transform({
-  position: new Vector3(136, 0, 24),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity19.addComponentOrReplace(transform20)
-
-const entity20 = new Entity('entity20')
-engine.addEntity(entity20)
-entity20.setParent(_scene)
-entity20.addComponentOrReplace(gltfShape)
-const transform21 = new Transform({
-  position: new Vector3(152, 0, 24),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity20.addComponentOrReplace(transform21)
-
-const entity21 = new Entity('entity21')
-engine.addEntity(entity21)
-entity21.setParent(_scene)
-entity21.addComponentOrReplace(gltfShape)
-const transform22 = new Transform({
-  position: new Vector3(8, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity21.addComponentOrReplace(transform22)
-
-const entity22 = new Entity('entity22')
-engine.addEntity(entity22)
-entity22.setParent(_scene)
-entity22.addComponentOrReplace(gltfShape)
-const transform23 = new Transform({
-  position: new Vector3(24, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity22.addComponentOrReplace(transform23)
-
-const entity23 = new Entity('entity23')
-engine.addEntity(entity23)
-entity23.setParent(_scene)
-entity23.addComponentOrReplace(gltfShape)
-const transform24 = new Transform({
-  position: new Vector3(40, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity23.addComponentOrReplace(transform24)
-
-const entity24 = new Entity('entity24')
-engine.addEntity(entity24)
-entity24.setParent(_scene)
-entity24.addComponentOrReplace(gltfShape)
-const transform25 = new Transform({
-  position: new Vector3(56, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity24.addComponentOrReplace(transform25)
-
-const entity25 = new Entity('entity25')
-engine.addEntity(entity25)
-entity25.setParent(_scene)
-entity25.addComponentOrReplace(gltfShape)
-const transform26 = new Transform({
-  position: new Vector3(72, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity25.addComponentOrReplace(transform26)
-
-const entity26 = new Entity('entity26')
-engine.addEntity(entity26)
-entity26.setParent(_scene)
-entity26.addComponentOrReplace(gltfShape)
-const transform27 = new Transform({
-  position: new Vector3(88, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity26.addComponentOrReplace(transform27)
-
-const entity27 = new Entity('entity27')
-engine.addEntity(entity27)
-entity27.setParent(_scene)
-entity27.addComponentOrReplace(gltfShape)
-const transform28 = new Transform({
-  position: new Vector3(104, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity27.addComponentOrReplace(transform28)
-
-const entity28 = new Entity('entity28')
-engine.addEntity(entity28)
-entity28.setParent(_scene)
-entity28.addComponentOrReplace(gltfShape)
-const transform29 = new Transform({
-  position: new Vector3(120, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity28.addComponentOrReplace(transform29)
-
-const entity29 = new Entity('entity29')
-engine.addEntity(entity29)
-entity29.setParent(_scene)
-entity29.addComponentOrReplace(gltfShape)
-const transform30 = new Transform({
-  position: new Vector3(136, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity29.addComponentOrReplace(transform30)
-
-const entity30 = new Entity('entity30')
-engine.addEntity(entity30)
-entity30.setParent(_scene)
-entity30.addComponentOrReplace(gltfShape)
-const transform31 = new Transform({
-  position: new Vector3(152, 0, 40),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
-})
-entity30.addComponentOrReplace(transform31)
-
 const building = new Entity('building')
 engine.addEntity(building)
 building.setParent(_scene)
-const transform32 = new Transform({
-  position: new Vector3(86, 0, 21.5),
-  rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(0.5, 0.5, 0.5)
+const transform20 = new Transform({
+  position: new Vector3(15, 0, 65),
+  rotation: new Quaternion(-2.155147220555295e-15, -0.7071068286895752, 8.429368847373553e-8, 0.7071068286895752),
+  scale: new Vector3(0.7, 0.7, 0.7)
 })
-building.addComponentOrReplace(transform32)
+building.addComponentOrReplace(transform20)
 const gltfShape2 = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/building.glb")
 gltfShape2.withCollisions = true
 gltfShape2.isPointerBlocker = true
