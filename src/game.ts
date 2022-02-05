@@ -348,7 +348,7 @@ building.setParent(_scene)
 const transform32 = new Transform({
   position: new Vector3(86, 0, 21.5),
   rotation: new Quaternion(0, 0, 0, 1),
-  scale: new Vector3(1, 1, 1)
+  scale: new Vector3(0.5, 0.5, 0.5)
 })
 building.addComponentOrReplace(transform32)
 const gltfShape2 = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/building.glb")
