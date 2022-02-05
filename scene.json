@@ -1,0 +1,74 @@
+{
+  "display": {
+    "title": "New scene",
+    "favicon": "favicon_asset",
+    "navmapThumbnail": "scene-thumbnail.png"
+  },
+  "owner": "",
+  "contact": {
+    "name": "author-name",
+    "email": ""
+  },
+  "main": "bin/game.js",
+  "tags": [],
+  "scene": {
+    "parcels": [
+      "0,0",
+      "0,1",
+      "0,2",
+      "1,0",
+      "1,1",
+      "1,2",
+      "2,0",
+      "2,1",
+      "2,2",
+      "3,0",
+      "3,1",
+      "3,2",
+      "4,0",
+      "4,1",
+      "4,2",
+      "5,0",
+      "5,1",
+      "5,2",
+      "6,0",
+      "6,1",
+      "6,2",
+      "7,0",
+      "7,1",
+      "7,2",
+      "8,0",
+      "8,1",
+      "8,2",
+      "9,0",
+      "9,1",
+      "9,2"
+    ],
+    "base": "0,0"
+  },
+  "communications": {
+    "type": "webrtc",
+    "signalling": "https://signalling-01.decentraland.org"
+  },
+  "policy": {
+    "contentRating": "E",
+    "fly": true,
+    "voiceEnabled": true,
+    "blacklist": [],
+    "teleportPosition": ""
+  },
+  "source": {
+    "version": 1,
+    "origin": "builder",
+    "projectId": "36911239-b594-43b6-bae0-af4766f8ef62",
+    "point": {
+      "x": 0,
+      "y": 0
+    },
+    "rotation": "east",
+    "layout": {
+      "rows": 10,
+      "cols": 3
+    }
+  }
+}
