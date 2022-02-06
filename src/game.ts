@@ -1,5 +1,6 @@
 
 const _scene = new Entity('_scene')
+import { initializebuild } from "./initializebuild"
 engine.addEntity(_scene)
 const transform = new Transform({
   position: new Vector3(0, 0, 0),
@@ -224,3 +225,5 @@ gltfShape2.withCollisions = true
 gltfShape2.isPointerBlocker = true
 gltfShape2.visible = true
 building.addComponentOrReplace(gltfShape2)
+initializebuild(building);
+
