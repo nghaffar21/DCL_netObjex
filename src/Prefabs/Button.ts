@@ -26,7 +26,7 @@ this.transform2 = new Transform({
 myEntity.addComponent(
     new OnPointerDown((e) => {
       rings.rings.forEach(element => {
-        element.setColor(color)
+        element.setColor(index)
       });
     })
   )
