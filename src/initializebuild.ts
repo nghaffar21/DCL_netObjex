@@ -1,5 +1,6 @@
 import { Rings } from "./GameObjects/rings"
 import { Buttons } from "./GameObjects/buttons"
+import { NFT } from "./GameObjects/NFTLogo"
 
 export function initializebuild(building)
 {
@@ -15,4 +16,5 @@ export function initializebuild(building)
         button.add(building);
     });
     
+    let Nft=new NFT(building)
 }
