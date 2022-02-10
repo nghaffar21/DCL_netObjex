@@ -1,6 +1,7 @@
 import {mySystem} from "../System/system"
 export function NFT(building)
 {
+    
     const myEntity=new Entity();
     const spinVitess=1;
     let rot=0;
