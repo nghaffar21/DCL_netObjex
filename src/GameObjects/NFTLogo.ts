@@ -6,9 +6,9 @@ export function NFT(building)
     let rot=0;
     myEntity.addComponentOrReplace(new GLTFShape("modeles/NFT.glb"))
     this.transform2 = new Transform({
-        position: new Vector3(10,0,0),
+        position: new Vector3(10,-20,0),
         rotation: new Quaternion(0, 0, 0, 1),
-        scale: new Vector3(1, 1, 1)
+        scale: new Vector3(1.5, 1.5, 1.5)
     })
   myEntity.addComponentOrReplace(this.transform2)
     this.update=function()
