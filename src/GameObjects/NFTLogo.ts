@@ -1,5 +1,5 @@
 import {mySystem} from "../System/system"
-export function NFT(building)
+export function NFTLogo(building)
 {
     
     const myEntity=new Entity();
