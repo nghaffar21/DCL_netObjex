@@ -3,7 +3,7 @@ export class NFT extends Entity
 {
     transform2;
     myMaterial:Material;
-    constructor(url,position0=new Vector3(0, 0, 0),rotation0=new Quaternion(0, 0, 0, 1))
+    constructor(url,position0=new Vector3(0, 0, 0),rotation0=new Quaternion(0, 0, 0, 1),scale0=new Vector3(10,10,10))
     {
         super();
 
@@ -19,7 +19,7 @@ export class NFT extends Entity
       new Transform({
         position: position0 ,
         rotation: rotation0,
-        scale:new Vector3(10,10,10)
+        scale:scale0
       })
     )
 
