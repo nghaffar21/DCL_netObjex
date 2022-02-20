@@ -65,7 +65,7 @@ this.filedata=
   ]
   ]};
   let ys=[3,11];
-for(let j=0; j<=0; j++)
+for(let j=0; j<=1; j++)
 {
     for (let i = 0; i < this.filedata["floor"+j].length; i++) 
   {
