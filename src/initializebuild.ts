@@ -3,6 +3,7 @@ import { Buttons } from "./GameObjects/buttons"
 import { NFTLogo } from "./GameObjects/NFTLogo"
 import { Elvator } from "./GameObjects/Elvator"
 import { NFTs } from "./GameObjects/nfts"
+import { Music } from "./GameObjects/sound"
 
 export function initializebuild(building)
 {
@@ -31,6 +32,9 @@ export function initializebuild(building)
     nfts.nfts.forEach(element => {
         element.add(building);
     });
+
+    //music
+    new Music(building);
 
 
 
