@@ -48,7 +48,7 @@ this.filedata=
     {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
     {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
     {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
-  ],
+  ], 
   [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
     {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
     {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
@@ -63,9 +63,69 @@ this.filedata=
     {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
     {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
   ]
-  ]};
-  let ys=[3,11];
-for(let j=0; j<=1; j++)
+  ],
+  "floor2":[
+    [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+    ],
+    [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+    ],
+    [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+    ],
+    [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+      {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+    ]
+    ],
+    "floor3":[
+      [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+      ],
+      [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+      ],
+      [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+      ],
+      [ {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"},
+        {link:"ethereum://0x06012c8cf97BEaD5deAe237070F9587f8E7A266d/558536"}
+      ]
+      ],};
+  let ys=[3,11,16,20];
+for(let j=0; j<=3; j++)
 {
     for (let i = 0; i < this.filedata["floor"+j].length; i++) 
   {
@@ -73,8 +133,8 @@ for(let j=0; j<=1; j++)
     {
       let nftData=this.filedata["floor"+j][i][k];
       let s=nftData.scale||new Vector3(9,5.5,10);
-      let p=nftData.position||new Vector3((i<=1?60:-11.25)-5.9*k,ys[j],12.5-25*(i%2))
-      if(nftData.link)
+      let p=nftData.position||new Vector3((i<=1?60:-11.25)-5.9*k,ys[j],13-25.4*(i%2))
+      if(nftData.link!=undefined)
         this.nfts.push(new NFT(nftData.link,p,Quaternion.Euler(0,i*180,0),s));
     }
   }

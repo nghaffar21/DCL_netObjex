@@ -12,7 +12,10 @@ export class NFT extends Entity
 
     //myEntity = new Entity()
     const shapeComponent = new NFTShape(
-      url
+      url,
+      {
+        style: PictureFrameStyle.None
+      }
     )
     myEntity.addComponent(shapeComponent)
     myEntity.addComponent(

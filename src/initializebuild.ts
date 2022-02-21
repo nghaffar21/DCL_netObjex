@@ -29,13 +29,20 @@ export function initializebuild(building)
 
     //nfts
     let nfts=new NFTs();
+    let maxnft=80; 
+    let i=0;
     nfts.nfts.forEach(element => {
-        element.add(building);
+        i++;
+        if(i<maxnft)
+        {element.add(building);
+            
+       // if(i>=10)
+       // engine.removeEntity(nfts.nfts[i-10])
+    }
     });
-
+    //nfts.nfts[1].setParent(building);
     //music
     new Music(building);
-
-
-
-}
+    
+  
+} 

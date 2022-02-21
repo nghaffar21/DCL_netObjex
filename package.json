@@ -14,7 +14,12 @@
     "decentraland-ecs": "latest"
   },
   "dependencies": {
+    "@dcl/ecs-scene-utils": "^1.7.5",
+    "decentraland-builder-scripts": "latest",
     "decentraland-ecs": "latest",
-    "decentraland-builder-scripts": "latest"
-  }
+    "http": "^0.0.1-security"
+  },
+  "bundledDependencies": [
+    "@dcl/ecs-scene-utils"
+  ]
 }
