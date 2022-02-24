@@ -28,8 +28,8 @@ export function initializebuild(building)
     let elvator=new Elvator(building,[0,7.8,12.8,17.8,22.8,60]);
 
     //nfts
-    let nfts=new NFTs();
-    let maxnft=80; 
+    let nfts=new NFTs(building);
+    /*let maxnft=80; 
     let i=0;
     nfts.nfts.forEach(element => {
         i++;
@@ -39,7 +39,7 @@ export function initializebuild(building)
        // if(i>=10)
        // engine.removeEntity(nfts.nfts[i-10])
     }
-    });
+    });*/
     //nfts.nfts[1].setParent(building);
     //music
     new Music(building);
