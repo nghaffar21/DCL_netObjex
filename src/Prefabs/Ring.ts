@@ -12,7 +12,7 @@ export class Ring extends Entity
     constructor(model,index,position0=Vector3.Zero())
     {
         super();
-        const ringshape = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/ring"+index+".glb")
+        const ringshape = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/rings/ring"+index+".glb")
         let myEntity =this;
         log(ringshape)
         myEntity.addComponent(ringshape)
@@ -35,7 +35,7 @@ export class Ring extends Entity
 setColor(color)
 {
     //this.myMaterial.albedoColor=color
-    this.myEntity.addComponentOrReplace(new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/ring"+color+".glb"))
+    this.myEntity.addComponentOrReplace(new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/rings/ring"+color+".glb"))
 }
 update()
 {

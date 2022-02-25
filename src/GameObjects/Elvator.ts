@@ -1,7 +1,8 @@
 import {mySystem} from "../System/system"
-export function Elvator(building,floors=null,position=new Vector3(-10,0,0),floorsCount=6,dis=20)
+import * as utils from '@dcl/ecs-scene-utils'
+export function Elvator(building,floors=null,position=new Vector3(-4,0,-11),floorsCount=6,dis=20)
 {
-    let qsdfds
+    this.curentFloor=0;
     const myEntity=new Entity();
     myEntity.setParent(building);
     const vitess=0.1;
@@ -9,15 +10,22 @@ export function Elvator(building,floors=null,position=new Vector3(-10,0,0),floor
     myEntity.addComponent(new GLTFShape("modeles/Metamall_elevator.gltf"))
 let myMaterial=new Material()
 myMaterial.albedoColor = new Color4(0,0,0,0);
+ this.ismoving=false;
 //myMaterial.metallic = 0.9
 //myMaterial.roughness = 0.1
 myEntity.addComponent(myMaterial)
 
-
+this.finishmove=function (t,i) {
+    t.target=floors[i];
+    t.ismoving=false;
+    log(2* Math.abs(t.curentFloor-i),"second");
+    t.curentFloor=i;
+    
+}
 
     const transform2 = new Transform({
         position:position,
-        rotation: new Quaternion(0, 0, 0, 1),
+        rotation:  Quaternion.Euler(0,-90,0),
         scale: new Vector3(1, 1, 1)
     })
     myEntity.addComponent(transform2)
@@ -29,7 +37,13 @@ myEntity.addComponent(myMaterial)
             floors.push(position.y+(dis*i/floorsCount))
         }
     }
-    
+    this.moveelvator=function(i,t=null)
+    {
+        if(t.ismoving)
+        return;
+        t.ismoving=true;
+        myEntity.addComponent(new utils.MoveTransformComponent(new Vector3(position.x,t.target,position.z) ,new Vector3(position.x,floors[i],position.z) , 2* Math.abs(t.curentFloor-i),()=>t.finishmove(t,i)));
+    }
 
     for (let i = 0; i < floorsCount; i++) 
     {
@@ -52,8 +66,9 @@ myEntity.addComponent(myMaterial)
         const t=this;
         buttonEntity.addComponent(
             new OnPointerDown((e) => {
+                //this.moveelvator(i,t);
                 t.target=floors[i];
-                log(t.target)
+                //log(t.target)
             })
           )
           buttonEntity.addComponent(transform2)

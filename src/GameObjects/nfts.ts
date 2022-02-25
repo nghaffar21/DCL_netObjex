@@ -2,8 +2,27 @@ import { NFT } from "../Prefabs/Nft"
 import { NftTriger } from "./NftTriger";
 export function NFTs(building)
 {
+   this.addnftdelay=function(t,k,maxt,i,j)
+  {
+    if(!t.activeFloors.includes(j))
+    return;
+    log("creat nft");
+if(maxt <= k)
+return;
+    let nftData=t.filedata["floor"+j][i][k];
+        let s=nftData.scale||new Vector3(9,5.5,10);
+        let p=nftData.position||new Vector3((i%2==0?0:1)+(i<=1?59:-11.25)-5.9*k,ys[j],12.7-24.85*(i%2))
+        if(nftData.link!=undefined)
+          {
+            let nft=new NFT(nftData.link,p,Quaternion.Euler(0,i*180,0),s);
+            t.nftsFloor[j].push(nft);
+            nft.add(building)
+          };
+    setTimeout(()=>t.addnftdelay(t,k+1,maxt,i,j), 500);
+}
   this.nftsFloor=[[],[],[],[]];
   this.activeFloors=[-1,-1];
+  //this.addnftdelay(0);
   this.addfloorNfts=numberFlor=>
   {
 
@@ -12,18 +31,19 @@ export function NFTs(building)
     let j=numberFlor;
     for (let i = 0; i < this.filedata["floor"+j].length; i++) 
     {
-      for (let k = 0; k < this.filedata["floor"+j][i].length; k++)
+      setTimeout(()=>this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j),500)
+      /*for (let k = 0; k < this.filedata["floor"+j][i].length; k++)
       {
         let nftData=this.filedata["floor"+j][i][k];
         let s=nftData.scale||new Vector3(9,5.5,10);
-        let p=nftData.position||new Vector3((i<=1?60:-11.25)-5.9*k,ys[j],13-25.4*(i%2))
+        let p=nftData.position||new Vector3((i%2==0?0:1)+(i<=1?59:-11.25)-5.9*k,ys[j],12.7-24.85*(i%2))
         if(nftData.link!=undefined)
           {
             let nft=new NFT(nftData.link,p,Quaternion.Euler(0,i*180,0),s);
             this.nftsFloor[j].push(nft);
             nft.add(building)
           };
-      }
+      }*/
     }
     log("add floor",numberFlor);
   };
