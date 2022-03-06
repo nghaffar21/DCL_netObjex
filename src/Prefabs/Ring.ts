@@ -9,10 +9,10 @@ export class Ring extends Entity
     myEntity:Entity;
     //myMaterial:Material;
     
-    constructor(model,index,position0=Vector3.Zero())
+    constructor(model,position0=Vector3.Zero(),index=0)
     {
         super();
-        const ringshape = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/rings/ring"+index+".glb")
+        const ringshape = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/rings/ring.gltf")
         let myEntity =this;
         log(ringshape)
         myEntity.addComponent(ringshape)
@@ -29,7 +29,7 @@ export class Ring extends Entity
         scale: new Vector3(1, 1, 1)
     })
   myEntity.addComponentOrReplace(this.transform2)
-  mySystem.GameObjects.push(this);
+  //mySystem.GameObjects.push(this);
   this.myEntity=myEntity;
 }
 setColor(color)

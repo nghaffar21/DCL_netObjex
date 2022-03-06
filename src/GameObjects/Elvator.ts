@@ -7,13 +7,43 @@ export function Elvator(building,floors=null,position=new Vector3(-4,0,-11),floo
     myEntity.setParent(building);
     const vitess=0.1;
     this.target=0;
-    myEntity.addComponent(new GLTFShape("modeles/Metamall_elevator.gltf"))
+    this.buttonsBox=[]
+    //myEntity.addComponent(new GLTFShape("modeles/elvator.glb"))
 let myMaterial=new Material()
 myMaterial.albedoColor = new Color4(0,0,0,0);
  this.ismoving=false;
-//myMaterial.metallic = 0.9
-//myMaterial.roughness = 0.1
-myEntity.addComponent(myMaterial)
+//myEntity.addComponent(myMaterial)
+
+this.animator = new Animator()
+
+/*const clipSwim = new AnimationState("floor0_5")
+this.animator.addClip(clipSwim)
+clipSwim.play()*/
+// Add animator component to the entity
+building.addComponent(this.animator)
+
+// Instance animation clip object
+for (let i = 0; i < 6; i++) 
+{
+    for (let j = 0; j < 6; j++) 
+    {
+        let k=i;
+        /*if(j<i)
+        { 
+            i=j; 
+            j=k;
+        }*/
+        log("add ","floor"+i+"_"+j)
+        this.animator.addClip(new AnimationState("floor"+i+"_"+j,{looping:false}) )
+    }
+    
+}
+
+ 
+
+//this.animator.addClip(new AnimationState("floor0_5") )
+//this.animator.getClip("floor0_5").play();
+// Add animation clip to Animator component
 
 this.finishmove=function (t,i) {
     t.target=floors[i];
@@ -22,7 +52,7 @@ this.finishmove=function (t,i) {
     t.curentFloor=i;
     
 }
-
+ 
     const transform2 = new Transform({
         position:position,
         rotation:  Quaternion.Euler(0,-90,0),
@@ -44,33 +74,73 @@ this.finishmove=function (t,i) {
         t.ismoving=true;
         myEntity.addComponent(new utils.MoveTransformComponent(new Vector3(position.x,t.target,position.z) ,new Vector3(position.x,floors[i],position.z) , 2* Math.abs(t.curentFloor-i),()=>t.finishmove(t,i)));
     }
-
+    this.playelvator=function(i,t,k=-1)
+    {
+        let j=t.curentFloor;
+        if(k!=-1)
+        if(j==i || j!=k)
+        return;
+        for (let i0 = 0; i0 < 6 ;i0++) {
+            for (let j = 0; j <6; j++) {
+                t.buttonsBox[i0][j].visible=(i0==i);
+            }
+            
+        }
+            log(" floor"+j+"_"+i)
+            let clip= t.animator.getClip("floor"+j+"_"+i);
+            clip.play();
+        t.curentFloor=i;
+    }
+let buttonsys=[0,7.8,12.4,17.4,22.4,69.5]
+let buttonys=[0,7.8,12.8,17.7,22.4,69.5]
+    for(let j = -1; j < floorsCount; j++)
+    {const buttonsBox0=[];
     for (let i = 0; i < floorsCount; i++) 
     {
+        if(j==-1)
+        if(i==0||i==5)
+             continue;
         const buttonEntity=new Entity();
+        const box= new BoxShape()
+        box.withCollisions = false;
+        box.visible=(j<=0);
         buttonEntity.setParent(myEntity);
-        buttonEntity.addComponent(new BoxShape())//.visible = false
+        buttonEntity.addComponent(box)//.visible = false
         let transform2 
-        if(i<=2)
+        if(j==-1)
+         {
+             
+             transform2 = new Transform({
+            position:new Vector3(13.2,buttonys[i]+1.4,2.4),
+            rotation:  Quaternion.Euler(50, 0, 0 ),
+            scale: new Vector3(5/floorsCount, 0.2, 5/floorsCount)
+        })}
+        else if(i<=2)
          transform2 = new Transform({
-            position:new Vector3(7.6+i*5/floorsCount,1.7,1.55),
+            position:new Vector3(4.4+i*5/floorsCount,buttonsys[j]+1.7,2.55),
             rotation:  Quaternion.Euler(-50, 0, 0 ),
             scale: new Vector3(3.6/floorsCount, 0.05, 3.6/floorsCount)
         })
         else
         transform2 = new Transform({
-            position:new Vector3(7.6+(i-3)*5/floorsCount,2.28,2.1),
+            position:new Vector3(4.4+(i-3)*5/floorsCount,buttonsys[j]+2.28,3.0),
             rotation:  Quaternion.Euler(-50, 0, 0 ),
             scale: new Vector3(3.6/floorsCount, 0.1, 3.6/floorsCount)
         })
         const t=this;
-        buttonEntity.addComponent(
+        buttonEntity.addComponent( 
             new OnPointerDown((e) => {
                 //this.moveelvator(i,t);
-                t.target=floors[i];
-                //log(t.target)
+                //t.target=floors[i];
+                if(j==-1)
+                t.playelvator(i,t)                
+                else
+                {t.playelvator(i,t,j)
+                    }
+                //from_0_to_1.play()
             })
           )
+          buttonsBox0.push(box);
           buttonEntity.addComponent(transform2)
           buttonEntity.addComponent(myMaterial)
           const textEntity=new Entity();
@@ -85,6 +155,9 @@ this.finishmove=function (t,i) {
           textEntity.addComponent(myText)
           myText.color = Color3.Black()*/
     }
+    if(j!=-1)
+    this.buttonsBox.push(buttonsBox0);
+    }
     myEntity.addComponentOrReplace(transform2)
     this.update=function()
     {
@@ -96,5 +169,5 @@ this.finishmove=function (t,i) {
             delta=-vitess;
         myEntity.getComponent(Transform).position.set(pos.x, pos.y+delta, pos.z)
     }
-    mySystem.GameObjects.push(this);
+    //mySystem.GameObjects.push(this);
 }

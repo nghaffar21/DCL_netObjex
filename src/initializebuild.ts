@@ -11,9 +11,7 @@ export function initializebuild(building)
     //rings
     let rings;
     rings=new Rings() ;
-    rings.rings.forEach(ring => {
-        ring.add(building);
-    });
+    rings.ring.add(building);
 
     //buttons
     let buttons;
@@ -26,7 +24,7 @@ export function initializebuild(building)
     let Nft=new NFTLogo(building);
  
     //elvator
-    let elvator=new Elvator(building,[0,7.8,12.8,17.8,22.8,60]);
+    let elvator=new Elvator(building,[0,7.8,12.8,17.8,22.8,70]);
 
     //nfts
     let nfts=new NFTs(building);
