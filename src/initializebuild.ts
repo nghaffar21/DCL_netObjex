@@ -21,7 +21,7 @@ export function initializebuild(building)
     });
     
     //nft logo
-    let Nft=new NFTLogo(building);
+    //let Nft=new NFTLogo(building);
  
     //elvator
     let elvator=new Elvator(building,[0,7.8,12.8,17.8,22.8,70]);

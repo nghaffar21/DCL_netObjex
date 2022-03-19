@@ -6,7 +6,7 @@ export class Ring extends Entity
     ringsCount=5;
     interval=0;
     transform2;
-    myEntity:Entity;
+    myEntity:Entity; 
     //myMaterial:Material;
     
     constructor(model,position0=Vector3.Zero(),index=0)
