@@ -106,18 +106,18 @@ export function NFTs(building)
           };
       }*/
     }
-    log("add floor",numberFlor); 
+    //log("add floor",numberFlor); 
   };
   this.removefloorNfts=numberFlor=>
   {
     if(!this.activeFloors.includes(numberFlor))
     return;
     this.nftsFloor[numberFlor].forEach(element => {
-      log(element);
+      //log(element);
       element.setParent(null);
       engine.removeEntity(element);
     });
-    log("remove floor",numberFlor);
+    //log("remove floor",numberFlor);
     this.nftsFloor[numberFlor]=[];
   };
   this.data={};
@@ -141,13 +141,16 @@ for (let index = 0; index < 6; index++)
   {dy=5.5
     y=2.3
   }
+  if(index==5)
+    y=50
+    dy/=5
   new NftTriger(building,()=>this.visitfloor(index),y,dy);
 }
 this.visitfloor=function(i)
 {
-  log("process floor",i);
+  //log("process floor",i);
   for (let index = 0; index < 6; index++) {
-    log(i!=index,i,index)
+    //log(i!=index,i,index)
     if(i!=index)
     this.removefloorNfts(index);
     else

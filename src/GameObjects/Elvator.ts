@@ -51,7 +51,7 @@ clipSwim.play()*/
     this.finishmove=function (t,i) {
     t.target=floors[i];
     t.ismoving=false;
-    log(2* Math.abs(t.curentFloor-i),"second");
+    //log(2* Math.abs(t.curentFloor-i),"second");
     t.curentFloor=i;
     
     }
@@ -89,7 +89,7 @@ clipSwim.play()*/
             }
             
         }
-            log(" floor"+j+"_"+i)
+            //log(" floor"+j+"_"+i)
             let clip= t.animator.getClip("floor"+j+"_"+i);
             clip.play();
         t.curentFloor=i;

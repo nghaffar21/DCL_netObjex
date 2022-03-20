@@ -25,7 +25,7 @@ box.addComponent(
       triggerBox, //shape
       {
         onCameraEnter : () => { 
-        log('visitfloor!')
+       // log('visitfloor!')
         visitfloor();
         //box.getComponent(Transform).position = new Vector3(0,0,0)
         },

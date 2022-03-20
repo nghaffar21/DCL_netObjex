@@ -14,7 +14,7 @@ myEntity.addComponent(new BoxShape())
 this. myMaterial = new Material()
 let myMaterial=this.myMaterial
 myMaterial.albedoColor=new Color4(0,0,0,0)
-this.transform2 = new Transform({
+this.transform2 = new Transform({ 
     position: new Vector3(position0.x+index*0.75,position0.y,position0.z),
     rotation:  Quaternion.Euler(40, 0, 0),
     scale: new Vector3(0.6, 1, 0.2)
