@@ -168,6 +168,8 @@ clipSwim.play()*/
     this.buttonsBox.push(buttonsBox0);
     }
     myEntity.addComponentOrReplace(transform2)
+    this.animator.getClip("floor"+1+"_"+0).play();
+ 
     this.update=function()
     {
         let pos=myEntity.getComponent(Transform).position;

@@ -1,6 +1,6 @@
 
 import * as utils from '@dcl/ecs-scene-utils'
-export function VideoPrefab(building,video="videos/video.mp4",position0=new Vector3(10, 15, -12),rotation0=Quaternion.Euler(0,0,0),flip=true)
+export function VideoPrefab(building,video="src/resource/video.mp4",position0=new Vector3(10, 15, -12),rotation0=Quaternion.Euler(0,0,0),flip=true)
 {    const myVideoClip = new VideoClip(video)
     
       const myVideoTexture = new VideoTexture(myVideoClip)
@@ -23,7 +23,7 @@ export function VideoPrefab(building,video="videos/video.mp4",position0=new Vect
       )
       screen.addComponent(myMaterial)
       screen.setParent( building)
-      let triggerBox = new utils.TriggerBoxShape(new Vector3(6,50,21),new Vector3(flip?-6:6,0,0))
+      let triggerBox = new utils.TriggerBoxShape(new Vector3(20,12,40),new Vector3(flip?-12:12,flip?-10:-10,0))
 
 //create trigger for entity
 
@@ -40,7 +40,7 @@ screen.addComponent(
         onCameraExit : () => { 
           myVideoTexture.pause();
         },
-        //enableDebug:true
+        enableDebug:false
       }
     )
   )

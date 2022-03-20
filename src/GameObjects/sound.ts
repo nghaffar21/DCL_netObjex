@@ -1,6 +1,6 @@
 import { setTimeout } from "@dcl/ecs-scene-utils";
 import {mySystem} from "../System/system"
-export function Music(build,url="sounds/music.wav")
+export function Music(build,url="src/resource/music.wav")
 {
   
 const cube = new Entity()

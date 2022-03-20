@@ -1,4 +1,4 @@
-import { links } from "src/nftslinks";
+import { links } from "src/resource/nftslinks";
 import { NFT } from "../Prefabs/Nft"
 import { NftTriger } from "./NftTriger";
 export function NFTs(building)
@@ -92,7 +92,7 @@ export function NFTs(building)
     let j=numberFlor;
     for (let i = 0; i < this.filedata["floor"+j].length; i++) 
     {
-      setTimeout(()=>this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j),1)
+      setTimeout(()=>this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j),0)
       /*for (let k = 0; k < this.filedata["floor"+j][i].length; k++)
       {
         let nftData=this.filedata["floor"+j][i][k];

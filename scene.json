@@ -45,6 +45,17 @@
     "blacklist": [],
     "teleportPosition": ""
   },
+  "spawnPoints": [
+    {
+      "name": "spawn1",
+      "default": true,
+      "position": {
+        "x": 10,
+        "y": 1,
+        "z": 10
+      }
+    }
+  ],
   "source": {
     "version": 1,
     "origin": "builder",
