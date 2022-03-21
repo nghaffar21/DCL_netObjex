@@ -93,6 +93,7 @@ export function NFTs(building)
     for (let i = 0; i < this.filedata["floor"+j].length; i++) 
     {
       setTimeout(()=>this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j),0)
+      //this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j);
       /*for (let k = 0; k < this.filedata["floor"+j][i].length; k++)
       {
         let nftData=this.filedata["floor"+j][i][k];
