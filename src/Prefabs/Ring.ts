@@ -12,7 +12,7 @@ export class Ring extends Entity
     constructor(model,position0=Vector3.Zero(),index=0)
     {
         super();
-        const ringshape = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/rings/untitled.glb")
+        const ringshape = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/rings/ring.glb")
         let myEntity =this;
         log(ringshape)
         myEntity.addComponent(ringshape)

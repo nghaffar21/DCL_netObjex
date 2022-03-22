@@ -5,6 +5,7 @@ import { Elvator } from "./GameObjects/Elvator"
 import { NFTs } from "./GameObjects/nfts"
 import { Music } from "./GameObjects/sound"
 import { VideoScene } from "./GameObjects/video"
+import { DLA } from "./GameObjects/Dla"
 
 export function initializebuild(building)
 {
@@ -43,6 +44,6 @@ export function initializebuild(building)
     //music
     new VideoScene(building); 
     new Music(building);
-    
+    DLA();
   
 } 
