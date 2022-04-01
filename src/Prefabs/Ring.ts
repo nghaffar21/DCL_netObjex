@@ -30,9 +30,9 @@ export class Ring extends Entity
     })
   myEntity.addComponentOrReplace(this.transform2)
   //mySystem.GameObjects.push(this);
-  this.myEntity=myEntity;
+  this.myEntity=myEntity; 
 }
-setColor(color)
+setColor(color) 
 {
     //this.myMaterial.albedoColor=color
     this.myEntity.addComponentOrReplace(new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/rings/ring"+color+".glb"))

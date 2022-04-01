@@ -13,7 +13,7 @@ const box = new Entity()
 box.addComponent(new Transform({scale:new Vector3(1,1,1) ,position: new Vector3(0, 0, 0) }))
  
 // create trigger area object, setting size and relative position
-let triggerBox = new utils.TriggerBoxShape(new Vector3(20,dy,100),new Vector3(0,y,0))
+let triggerBox = new utils.TriggerBoxShape(new Vector3(30,dy,100),new Vector3(0,y,0))
 
 //create trigger for entity
 
@@ -29,7 +29,7 @@ box.addComponent(
         visitfloor();
         //box.getComponent(Transform).position = new Vector3(0,0,0)
         },
-        //enableDebug:true
+       // enableDebug:true
       }
     )
   )

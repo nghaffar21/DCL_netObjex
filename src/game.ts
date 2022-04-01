@@ -215,9 +215,9 @@ const building = new Entity('building')
 engine.addEntity(building)
 building.setParent(_scene)
 const transform20 = new Transform({
-  position: new Vector3(15, 0, 65),
+  position: new Vector3(16.1, 0, 71.4),
   rotation: new Quaternion(-2.155147220555295e-15, -0.7071068286895752, 8.429368847373553e-8, 0.7071068286895752),
-  scale: new Vector3(0.7, 0.7, 0.7)
+  scale: new Vector3(1.006, 1, 1.009)
 })
 building.addComponentOrReplace(transform20)
 const gltfShape2 = new GLTFShape("e7f4045f-cb85-43e5-963c-173760106dbe/Metamall_V9.glb")

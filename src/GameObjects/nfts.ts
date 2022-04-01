@@ -1,3 +1,4 @@
+import { setTimeout } from "@dcl/ecs-scene-utils";
 import { links } from "src/resource/nftslinks";
 import { NFT } from "../Prefabs/Nft"
 import { NftTriger } from "./NftTriger";
@@ -92,7 +93,7 @@ export function NFTs(building)
     let j=numberFlor;
     for (let i = 0; i < this.filedata["floor"+j].length; i++) 
     {
-      setTimeout(()=>this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j),0)
+      setTimeout(0,()=>this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j))
       //this.addnftdelay(this,0,this.filedata["floor"+j][i].length,i,j);
       /*for (let k = 0; k < this.filedata["floor"+j][i].length; k++)
       {
@@ -136,16 +137,17 @@ for(let j=0; j<1; j++)
 this.activeFloors=[0,1];
 for (let index = 0; index < 6; index++) 
 {
-  let y=7.2+(index-1)*3.5;
-  let dy=3;
+  let y=9+(index-1)*5;
+  let dy=1;
   if(index==0)
-  {dy=5.5
-    y=2.3
+  {dy=1
+    y=1
   }
   if(index==5)
-    y=50
+    y=66
     dy/=5
   new NftTriger(building,()=>this.visitfloor(index),y,dy);
+  new NftTriger(building,()=>this.visitfloor(index),y+2,dy);
 }
 this.visitfloor=function(i)
 {
