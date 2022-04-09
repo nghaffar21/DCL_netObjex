@@ -1,0 +1,6 @@
+import { Nft } from "src/prefabs/Nft";
+
+export function Nfts()
+{
+    new Nft("ethereum://0x495f947276749ce646f68ac8c248420045cb7b5e/108895657503177547807713615587106130920312718766249665638523948011964233416705",new Vector3(2, 1.5, 2));
+}
