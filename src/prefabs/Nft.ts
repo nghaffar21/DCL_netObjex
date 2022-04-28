@@ -1,13 +1,17 @@
-export function Nft(url,position)
+export function Nft(url,position,rotation)
 {
     const entity = new Entity()
 const shapeComponent = new NFTShape(
   url
-,)
+,
+{style:PictureFrameStyle.None}
+)
 entity.addComponent(shapeComponent)
 entity.addComponent(
   new Transform({
-    position,
+    position:new Vector3 (position.x,26,position.z),
+    rotation,
+    scale:new Vector3(4,4,4)
   })
 )
 
