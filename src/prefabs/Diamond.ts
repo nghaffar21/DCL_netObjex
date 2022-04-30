@@ -1,11 +1,12 @@
+import { invisible } from "src/Resource"
+
 export function Diamond(building,position,url,index)
 {
     const entity = new Entity()
     //const shapeComponent = new GLTFShape("models/diamond.glb")
     entity.addComponent(new BoxShape())
-    const material= new Material();
-    material.albedoColor=new Color4(0,0,0,0);
-    entity.addComponent(material)
+    
+    entity.addComponent(invisible)
     entity.addComponent(
       new Transform({
         position,
