@@ -2,6 +2,7 @@ import { setTimeout } from "@dcl/ecs-scene-utils";
 
 export function Transport()
 {
+  
     const entity = new Entity("Transport")
     const shapeComponent = new GLTFShape("models/teleport.glb")
     const animator =  entity.addComponent(new Animator())
@@ -20,4 +21,5 @@ export function Transport()
  
       //entity.setParent(building) 
       engine.addEntity(entity)
+      
 }
