@@ -6,6 +6,7 @@ export function Nfts()
     for(let i=0;i<8;i++)
         new Nft(links.floor0[0][i].link,new Vector3(i*3-11, 1.5, 1.5),Quaternion.Euler(0,180,0));
     for(let i=0;i<8;i++)
+    //for(let i=0;i<5;i++)
         if(i*3-11<=-5 || i*3-11>=7)
             new Nft(links.floor0[1][i].link,new Vector3(i*3-11, 1.5, 14),Quaternion.Euler(0,0,0));
     for(let i=0;i<4;i++)

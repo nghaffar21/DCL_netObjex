@@ -15,8 +15,9 @@ export function Transport()
         { 
             animator.getClip("Animation").play(true);
             entity.getComponent(Transform).position=new Vector3(p.x,p.y,p.z)
+            entity.getComponent(Transform).scale=new Vector3(1,1,1)
         }
-        entity.addComponent(new Transform({position:new Vector3(0,10,4)}))
+        entity.addComponent(new Transform({position:new Vector3(0,10,0),scale:new Vector3(0,0,0)}))
 
  
       //entity.setParent(building) 

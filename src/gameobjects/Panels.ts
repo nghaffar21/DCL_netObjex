@@ -30,8 +30,22 @@ export function Paneles(building)
         this.run=true
       }//, {showFeedback: false }
 ))
- botomroom(this,new Vector3(-11.6,0,13.2),new Vector3(5,5,1.1),8);
+
+ botomroom2(this,new Vector3(-11.6,0,13.2),new Vector3(5,5,1.1),new Vector3(-11,15,12));
+ botomroom2(this,new Vector3(-12.4,0,2.4),new Vector3(4,5,2),new Vector3(-11,15,2.4));
+ botomroom(this,new Vector3(-4.7,0,13.2),new Vector3(3.2,5,2.5),8);
+ botomroom(this,new Vector3(-4.85,0,5.5),new Vector3(1.3,5,1.3),7);
+ botomroom(this,new Vector3(7,1,3),new Vector3(5,4,2),2);
+ botomroom2(this,new Vector3(10,1,13.5),new Vector3(5,4,2),new Vector3(10,10,13.5));
+
+
+ 
  botomroom(this,new Vector3(12.5,1,3),new Vector3(2,4,2),3);
+
+
+ 
+
+
 function botomroom(t,rom,sz,index)
 {
     [rom].forEach(element => {
@@ -68,7 +82,43 @@ function botomroom(t,rom,sz,index)
       });
 }
 
-/*rooms.forEach(element => {
+function botomroom2(t,rom,sz,rom2)
+{
+    [rom].forEach(element => {
+        const box=new Entity()
+        //box.addComponent(new BoxShape())
+        box.addComponent(new Transform({position:element}))
+        //box.getComponent(BoxShape).withCollisions = false
+
+
+        let triggerBox = new utils.TriggerBoxShape(sz);
+
+        //create trigger for entity
+        box.addComponent(
+          new utils.TriggerComponent(
+            triggerBox, //shape
+            {
+              onCameraEnter : () => {
+                if(t.run)
+                return
+                transport.start();
+                setTimeout(1000,() => {
+                    movePlayerTo(rom2)
+                    t.run=false
+                });
+                t.run=true
+              }//,enableDebug:true
+            }
+          )
+        )
+        
+
+        engine.addEntity(box);
+        
+      });
+}
+/*
+rooms.forEach(element => {
     const box=new Entity()
     box.addComponent(new BoxShape())
     box.addComponent(new Transform({position:element}))
