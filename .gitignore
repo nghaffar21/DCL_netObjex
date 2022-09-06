@@ -1,6 +1,6 @@
 extra
 backup
-models/old
+models/
 models/bnight
 node_modules/
 bin/
