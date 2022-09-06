@@ -2,3 +2,5 @@ extra
 backup
 models/old
 models/bnight
+node_modules
+bin
